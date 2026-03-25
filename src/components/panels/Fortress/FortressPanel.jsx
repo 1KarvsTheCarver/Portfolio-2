@@ -52,7 +52,7 @@ export default function FortressPanel() {
       {/* Certifications */}
       <div className={styles.section}>
         <h4 className={styles.sectionTitle}>Education</h4>
-        <p className={styles.bodyText}>⚜ B.S. Software Engineering — Western Governors University (In Progress)</p>
+        <p className={styles.bodyText}>⚜ B.S. Software Engineering — Western Governors University</p>
         <p className={styles.bodyText}>⚜ IT Support &amp; Systems Administration — PerScholas</p>
         <p className={styles.bodyText}>⚜ CompTIA A+ Certified</p>
         <p className={styles.bodyText}>⚜ Google IT Support Professional Certificate</p>
