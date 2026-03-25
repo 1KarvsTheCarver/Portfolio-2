@@ -1,0 +1,19 @@
+.btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: var(--z-mute);
+  font-size: 1.4rem;
+  background: rgba(30, 15, 0, 0.75);
+  border: 1px solid var(--parchment-dark);
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+.btn:hover { background: rgba(30, 15, 0, 0.95); transform: scale(1.1); }

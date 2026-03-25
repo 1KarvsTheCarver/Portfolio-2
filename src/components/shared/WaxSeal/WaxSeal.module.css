@@ -1,0 +1,41 @@
+.seal {
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle at 35% 35%, #b22222, #6b0000);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.5), inset 0 1px 3px rgba(255,100,100,0.2);
+  position: relative;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.clickable { cursor: pointer; transition: transform 0.15s; }
+.clickable:hover { transform: scale(1.08); }
+
+.letter {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: rgba(255, 220, 180, 0.85);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.cracked {
+  background: radial-gradient(circle at 35% 35%, #7a1a1a, #400000);
+}
+
+.crack {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 10 L28 30 L35 32 L25 55 M32 10 L38 28 L30 32 L42 54' stroke='rgba(0,0,0,0.5)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") center/cover;
+  animation: crackIn 0.3s ease forwards;
+}
+
+@keyframes crackIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}

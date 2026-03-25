@@ -1,0 +1,94 @@
+.scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Beacon */
+.beacon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.beaconTower {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(rgba(255, 240, 100, 0.35) 0deg, transparent 30deg, transparent 360deg);
+  animation: beaconSweep 3s linear infinite;
+}
+
+@keyframes beaconSweep {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.fog {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(180,200,220,0.15) 0%, transparent 70%);
+  animation: fogPulse 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes fogPulse {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+/* Content */
+.content { max-width: 480px; width: 100%; }
+
+.focusCard {
+  background: linear-gradient(135deg, rgba(255,248,220,0.6) 0%, rgba(240,225,180,0.6) 100%);
+  border: 1px solid var(--parchment-burn);
+  border-radius: 4px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink-dark);
+  margin-bottom: 0.6rem;
+}
+
+.cardBody {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-mid);
+  line-height: 1.75;
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.link {
+  font-family: var(--font-sub);
+  font-size: 0.78rem;
+  color: var(--ink-dark);
+  border: 1px solid var(--parchment-burn);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  text-decoration: none;
+  background: rgba(92,58,30,0.08);
+  transition: background 0.15s;
+}
+.link:hover { background: rgba(92,58,30,0.18); }

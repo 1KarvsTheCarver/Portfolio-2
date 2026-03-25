@@ -1,0 +1,46 @@
+.wrap {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: var(--z-hotspot);
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 35% 35%, var(--gold-bright), var(--gold));
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.3), 0 2px 8px rgba(0,0,0,0.4);
+  will-change: transform, opacity;
+}
+
+.dot::after {
+  content: '✕';
+  position: absolute;
+  top: -10px; left: -10px;
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  color: var(--red-wax);
+  opacity: 0.85;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--ink-dark);
+  text-shadow: 1px 1px 2px rgba(255,240,200,0.8), 0 0 8px rgba(255,240,180,0.5);
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  pointer-events: none;
+}
+
+.wrap:hover .dot {
+  box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.45), 0 4px 14px rgba(0,0,0,0.5);
+}

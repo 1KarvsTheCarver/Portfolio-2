@@ -1,0 +1,53 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 43, 62, 0.92);
+  z-index: var(--z-mobile);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.scroll {
+  background: var(--parchment-mid);
+  border: 3px solid var(--parchment-burn);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+.skull {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ink-dark);
+  margin-bottom: 1rem;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  background: var(--ink-dark);
+  color: var(--parchment-light);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover { background: var(--ink-mid); }
