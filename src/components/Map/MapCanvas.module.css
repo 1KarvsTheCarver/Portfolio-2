@@ -3,59 +3,17 @@
   inset: 0;
   z-index: var(--z-map);
   overflow: hidden;
+  background: #120700;
 }
 
-/* Parchment base */
-.parchment {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 20%, #e8d09a 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 80%, #d4a96a 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 50%, #f0dba8 0%, #c9a06a 100%);
-  filter: url(#grain);
-}
-
-/* Burned / torn edges */
-.parchment::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(80, 30, 5, 0.55) 0%, transparent 35%),
-    radial-gradient(ellipse at 100% 0%, rgba(60, 20, 3, 0.5) 0%, transparent 35%),
-    radial-gradient(ellipse at 0% 100%, rgba(70, 25, 4, 0.5) 0%, transparent 35%),
-    radial-gradient(ellipse at 100% 100%, rgba(90, 35, 5, 0.6) 0%, transparent 35%);
-  pointer-events: none;
-}
-
-/* SVG filter for paper grain */
-.filterSvg {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
-/* Decorative SVG overlay */
-.decorLayer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Hotspot layer */
 .hotspotLayer {
   position: absolute;
   inset: 0;
   z-index: var(--z-hotspot);
+  pointer-events: none; /* individual hotspots re-enable pointer events */
 }
 
-/* Vignette overlay */
-.vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(30, 10, 0, 0.35) 100%);
-  pointer-events: none;
-  z-index: 3;
+/* Re-enable pointer events on hotspot children */
+.hotspotLayer > * {
+  pointer-events: all;
 }
