@@ -22,7 +22,7 @@ export default function FortressPanel() {
         </div>
         <div className={styles.info}>
           <h3>Taqee Moore</h3>
-          <p>IT Professional · Freelance Web Developer</p>
+          <p>Creative Web Developer · IT Professional</p>
           <p>Detroit, MI (Remote) · EST</p>
           <div className={styles.contact}>
             <span className={styles.contactChip}>📞 313-646-7526</span>
@@ -36,11 +36,16 @@ export default function FortressPanel() {
       <div className={styles.section}>
         <h4 className={styles.sectionTitle}>The Captain&apos;s Log</h4>
         <p className={styles.bodyText}>
-          Versatile IT Support Professional and Freelance Web Developer with 4+ years of experience in remote
-          MSP and help desk environments, and hands-on experience building and managing client-facing digital products.
-          Skilled in technical support, CRM documentation, and customer communication across phone, chat, and email.
-          Experienced in Shopify e-commerce development, Telegram bot collaboration, and cross-functional project
-          coordination. Brings a proactive, solutions-first mindset to every role.
+          Creative web developer and IT professional with 4+ years of experience building client-facing digital
+          products and navigating remote MSP and help desk environments. I design and ship interactive web experiences
+          — from AI-augmented pirate map portfolios to cross-platform mobile apps with Firebase and Stripe — while
+          maintaining deep roots in technical support, CRM documentation, and systems administration.
+        </p>
+        <p className={styles.bodyText}>
+          Experienced in Shopify theme development, React Native, GSAP animation, and leveraging AI tools like
+          Claude Code to accelerate full-stack delivery. I bring a solutions-first, creative mindset to every
+          project — whether that&apos;s building a storefront, automating a workflow, or crafting a UI that makes
+          people stop and look twice.
         </p>
       </div>
 
