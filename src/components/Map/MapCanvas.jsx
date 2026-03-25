@@ -2,11 +2,10 @@ import { useRef, useEffect } from 'react';
 import { useNavigation } from '../../context/NavigationContext';
 import { useAudio } from '../../context/AudioContext';
 import { locations } from '../../data/locations';
-import { attachParallax } from '../../animations/mapAmbientAnimations';
+import { animateWholeMap } from '../../animations/mapAmbientAnimations';
 import Hotspot from './Hotspot';
 import CompassRose from './CompassRose';
 import MapSVG from './MapSVG';
-import MapAnimations from './MapAnimations';
 import styles from './MapCanvas.module.css';
 
 export default function MapCanvas({ children }) {
@@ -15,7 +14,7 @@ export default function MapCanvas({ children }) {
   const mapLayerRef = useRef(null);
 
   useEffect(() => {
-    return attachParallax(mapLayerRef.current);
+    return animateWholeMap(mapLayerRef.current);
   }, []);
 
   function handleHotspotClick(id) {
@@ -29,7 +28,6 @@ export default function MapCanvas({ children }) {
       {/* Map layers: image + ambient animations share parallax wrapper */}
       <div ref={mapLayerRef} style={{ position: 'absolute', inset: 0 }}>
         <MapSVG />
-        <MapAnimations />
       </div>
 
       {/* Interactive hotspots (absolutely positioned over SVG) */}
