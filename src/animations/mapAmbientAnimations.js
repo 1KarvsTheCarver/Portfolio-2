@@ -30,16 +30,6 @@ export function animateWholeMap(el) {
     repeat: -1,
   });
 
-  // CSS filter pulse — simulates shifting ocean light and wind-driven atmosphere
-  gsap.to(el, {
-    filter: 'brightness(1.08) saturate(1.12)',
-    duration: 6,
-    ease: 'sine.inOut',
-    yoyo: true,
-    repeat: -1,
-    delay: 2,
-  });
-
   // Mouse parallax — layered on top of the ambient drift
   const handler = (e) => {
     const dx = (e.clientX / window.innerWidth  - 0.5) * 20;
