@@ -15,19 +15,17 @@ export default function TavernPanel() {
 
   return (
     <PanelBase locationId={LOCATIONS.TAVERN} title="🍺 The Tavern — Skills">
-      <div className={styles.chalkboard}>
-        <p className={styles.boardTitle}>— Today&apos;s Specials —</p>
-        <div className={styles.grid}>
-          {skills.map((cat) => (
-            <div key={cat.category} className={styles.category}>
-              <p className={styles.categoryName}>{cat.category}</p>
+      <div className={styles.board}>
+        {skills.map((cat) => (
+          <div key={cat.category} className={styles.section}>
+            <p className={styles.categoryName}>{cat.category}</p>
+            <ul className={styles.list}>
               {cat.items.map((item) => (
-                <p key={item} className={styles.item}>{item}</p>
+                <li key={item} className={styles.item}>{item}</li>
               ))}
-            </div>
-          ))}
-        </div>
-        <p className={styles.note}>⚓ All skills battle-tested in the field ⚓</p>
+            </ul>
+          </div>
+        ))}
       </div>
     </PanelBase>
   );
