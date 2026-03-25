@@ -34,14 +34,6 @@ export default function LighthousePanel() {
           </div>
 
           <div className={styles.focusCard}>
-            <h4 className={styles.cardTitle}>🧭 Open to Opportunities</h4>
-            <p className={styles.cardBody}>
-              Seeking IT Support (Tier 1–2), Help Desk, or junior web development roles. Available evenings,
-              weekends, and holidays — including on-call Saturdays &amp; Sundays (EST). Open to remote and hybrid positions.
-            </p>
-          </div>
-
-          <div className={styles.focusCard}>
             <h4 className={styles.cardTitle}>🏴‍☠️ Current Crew Projects</h4>
             <p className={styles.cardBody}>
               Managing <strong>shujaacollective.store</strong> (Shopify), collaborating with Helm Bots on Telegram
