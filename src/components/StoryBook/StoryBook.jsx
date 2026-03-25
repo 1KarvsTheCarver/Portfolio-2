@@ -14,7 +14,7 @@ export default function StoryBook({ onComplete }) {
   const coverRef  = useRef(null);
   const page1Ref  = useRef(null);
   const page2Ref  = useRef(null);
-  const mapRevRef = useRef(null); // passed from App via prop? No — we use a hidden mapFade div
+  const sceneRef  = useRef(null);
 
   async function handleClick() {
     if (opened) return;
@@ -25,7 +25,7 @@ export default function StoryBook({ onComplete }) {
       coverRef:  coverRef.current,
       page1Ref:  page1Ref.current,
       page2Ref:  page2Ref.current,
-      mapRef:    mapRevRef.current,
+      sceneRef:  sceneRef.current,
       onQuill:   () => playSound('quill'),
       onOcean:   () => fadeInOcean(),
       onComplete: () => onComplete(),
@@ -33,9 +33,7 @@ export default function StoryBook({ onComplete }) {
   }
 
   return (
-    <div className={styles.scene} onClick={!opened ? handleClick : undefined}>
-      {/* Hidden map-reveal div (opacity animated then onComplete fires) */}
-      <div ref={mapRevRef} style={{ opacity: 0, scale: 0.97, position: 'absolute', inset: 0, pointerEvents: 'none' }} />
+    <div ref={sceneRef} className={styles.scene} onClick={!opened ? handleClick : undefined}>
 
       <div className={styles.bookWrap} aria-label="Click to open the storybook" role="button" tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && !opened && handleClick()}>
