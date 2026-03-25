@@ -40,6 +40,14 @@ export const skills = [
     ],
   },
   {
+    category: "AI-Assisted Development",
+    items: [
+      "Claude Code (Anthropic)", "Prompt Engineering", "AI-Augmented Workflows",
+      "Multi-step Agent Tasks", "Code Generation & Review",
+      "Leonardo.ai (Image Generation)", "LLM Integration",
+    ],
+  },
+  {
     category: "Tools & Workflow",
     items: [
       "Git & GitHub", "Netlify", "ESLint", "Howler.js", "Jira",
