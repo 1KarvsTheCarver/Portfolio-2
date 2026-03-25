@@ -29,7 +29,7 @@ export default function MapSVG() {
         href="/images/map-bg.jpg"
         x="0" y="0"
         width="1440" height="900"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMin meet"
       />
 
       {/* Subtle grain texture on top of image */}
