@@ -15,12 +15,14 @@ export default function Hotspot({ location, onClick, index }) {
       style={{ left: location.x, top: location.y }}
       onClick={() => onClick(location.id)}
       role="button"
-      aria-label={`Navigate to ${location.label}`}
+      aria-label={`Navigate to ${location.label} — ${location.sub}`}
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && onClick(location.id)}
     >
-      <div ref={dotRef} className={styles.dot} />
-      <span className={styles.label}>{location.label}</span>
+      <span className={styles.label}>
+        {location.label}
+        <span className={styles.sub}> ({location.sub})</span>
+      </span>
     </div>
   );
 }
