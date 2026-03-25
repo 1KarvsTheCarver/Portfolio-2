@@ -1,58 +1,46 @@
 export const skills = [
   {
-    category: "Frontend Development",
+    category: "Development",
     items: [
-      "React 19", "React Native", "Vite", "TypeScript", "JavaScript (ES6+)",
-      "HTML5", "CSS3", "CSS Modules", "NativeWind", "Tailwind CSS",
-      "GSAP", "React Native Reanimated", "Web Components", "Shadow DOM",
+      "Web Development",
+      "Mobile App Development",
+      "UI/UX Design",
+      "Front-End Architecture",
+      "E-Commerce Development",
+      "API Integration",
     ],
   },
   {
-    category: "Backend & Cloud",
+    category: "Creative",
     items: [
-      "Firebase (Auth, Firestore, Functions)", "Firebase Admin SDK",
-      "Firebase Cloud Functions (Node.js)", "Stripe API",
-      "Formspree", "REST APIs", "Shopify Storefront API", "Shopify Admin API",
+      "Interactive Experiences",
+      "Motion & Animation",
+      "AI-Augmented Workflows",
+      "Creative Direction",
+      "Brand Storefronts",
+      "Prompt Engineering",
     ],
   },
   {
-    category: "Mobile & Cross-Platform",
+    category: "Technical",
     items: [
-      "Expo", "Expo Router", "React Native (iOS & Android)",
-      "AsyncStorage", "Expo Notifications", "Expo Auth Session",
-      "Zustand", "React Native Web",
+      "IT Support & Help Desk",
+      "Systems Administration",
+      "Identity & Access Mgmt",
+      "Cloud Infrastructure",
+      "CRM & Ticketing",
+      "Cross-Platform Builds",
     ],
   },
   {
-    category: "E-Commerce & CMS",
+    category: "Professional",
     items: [
-      "Shopify (Theme Development)", "Shopify Horizon Theme", "Liquid Templating",
-      "Printify Integration", "Cart & Checkout Customization",
-      "Product Catalog Management", "Shopify Sections & Blocks",
-    ],
-  },
-  {
-    category: "IT Support & Identity",
-    items: [
-      "Help Desk (Tier 1–2)", "Microsoft 365 Admin", "Azure Active Directory",
-      "Okta SSO & MFA", "Google Workspace", "ServiceNow", "ConnectWise",
-      "Remote Desktop Support", "ITIL Framework", "Cisco VPN",
-    ],
-  },
-  {
-    category: "AI-Assisted Development",
-    items: [
-      "Claude Code (Anthropic)", "Prompt Engineering", "AI-Augmented Workflows",
-      "Multi-step Agent Tasks", "Code Generation & Review",
-      "Leonardo.ai (Image Generation)", "LLM Integration",
-    ],
-  },
-  {
-    category: "Tools & Workflow",
-    items: [
-      "Git & GitHub", "Netlify", "ESLint", "Howler.js", "Jira",
-      "Salesforce", "Microsoft Teams", "Slack", "Figma",
-      "Windows 10/11", "macOS",
+      "Client Communication",
+      "Project Coordination",
+      "Technical Documentation",
+      "Problem Solving",
+      "Remote Collaboration",
+      "Detail-Oriented",
     ],
   },
 ];
