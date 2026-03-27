@@ -32,7 +32,6 @@ export function AudioProvider({ children }) {
           src,
           loop: isAmbient,
           volume: isAmbient ? 0 : 0.75,
-          html5: key === 'ocean-ambient',
           preload: true,
         });
       }
@@ -59,8 +58,9 @@ export function AudioProvider({ children }) {
   const fadeInOcean = useCallback(() => {
     const a = ambientRef.current;
     if (!a) return;
-    a.play();
-    a.fade(0, 0.35, 2000);
+    const start = () => { a.play(); a.fade(0, 0.35, 3000); };
+    if (a.state() === 'loaded') { start(); }
+    else { a.once('load', start); }
   }, []);
 
   const toggleMute = useCallback(() => {
