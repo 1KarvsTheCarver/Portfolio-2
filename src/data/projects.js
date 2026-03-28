@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: 'task-tracker',
+    title: 'Personal Task & Budget Tracker',
+    artifact: '📋',
+    subtitle: 'ASP.NET Core MVC · C# · SQL Server · Entity Framework',
+    description:
+      'Full-stack web application for managing tasks and associated budget line items. Features N-tier architecture (Core, Data, Web, Tests), Repository pattern, AJAX live search with real-time filtering via a SQL Server stored procedure, overdue detection, dashboard summary cards, and CSRF protection. Unit tested with xUnit and Moq.',
+    tags: ['C#', '.NET 10', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'Bootstrap', 'jQuery', 'xUnit'],
+    link: 'https://github.com/1KarvsTheCarver',
+    linkLabel: 'View on GitHub',
+  },
+  {
     id: 'accountability-app',
     title: 'Accountability App',
     artifact: '📱',
